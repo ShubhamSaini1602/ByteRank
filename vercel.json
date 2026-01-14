@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "./Backend/src/index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "./Frontend/package.json",
+      "use": "@vercel/static"
+    }
+  ],
+  "rewrites": [
+    { "source": "/user/(.*)", "destination": "/Backend/src/index.js" },
+    { "source": "/problem/(.*)", "destination": "/Backend/src/index.js" },
+    { "source": "/submission/(.*)", "destination": "/Backend/src/index.js" },
+    { "source": "/ai/(.*)", "destination": "/Backend/src/index.js" },
+    { "source": "/note/(.*)", "destination": "/Backend/src/index.js" },
+    { "source": "/video/(.*)", "destination": "/Backend/src/index.js" },
+    { "source": "/payment/(.*)", "destination": "/Backend/src/index.js" },
+    { "source": "/(.*)", "destination": "/Frontend/index.html" }
+  ]
+}
