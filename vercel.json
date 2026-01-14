@@ -7,7 +7,8 @@
     },
     {
       "src": "./Frontend/package.json",
-      "use": "@vercel/static-build"
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
     }
   ],
   "rewrites": [
@@ -18,7 +19,7 @@
     { "source": "/note/(.*)", "destination": "/Backend/src/index.js" },
     { "source": "/video/(.*)", "destination": "/Backend/src/index.js" },
     { "source": "/payment/(.*)", "destination": "/Backend/src/index.js" },
-    { "source": "/assets/(.*)", "destination": "/Frontend/dist/assets/$1" },
-    { "source": "/(.*)", "destination": "/Frontend/dist/index.html" }
+    { "source": "/assets/(.*)", "destination": "/Frontend/assets/$1" },
+    { "source": "/(.*)", "destination": "/Frontend/index.html" }
   ]
 }
