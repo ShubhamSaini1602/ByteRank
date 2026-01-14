@@ -9,6 +9,7 @@ import { sendOtp, registerUser } from '../CentralStore/authSlice';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { Link } from "react-router";
+import SignUpVideo from "../assets/sign-up-video.mp4"
 
 const passwordValidation = {
     // Creating a Regular Expression Pattern
@@ -90,7 +91,7 @@ function SignUp(){
                 <h2 className="first-text">Welcome to <span className="rise">ByteRank.</span></h2>
                 <p className="second-text">Create your ByteRank account and begin your climb to the top.</p>
                 <video height="500" autoPlay muted loop className="video">
-                    <source src="../src/assets/sign-up-video.mp4" type="video/mp4"></source>
+                    <source src={SignUpVideo} type="video/mp4"></source>
                     Your Browser does not support the video element
                 </video>
             </div>
