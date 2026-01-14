@@ -28,7 +28,7 @@ app.use(rateLimiter);
 app.use(async (req, res, next) => {
     try {
         // Only connect to Redis if it is NOT already connected
-        if (!redisClient.isOpen) {
+        if (!redisClient.isOpen || !redisClient.isReady) {
             await redisClient.connect();
         }
         await main();
