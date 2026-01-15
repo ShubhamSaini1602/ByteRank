@@ -16,7 +16,7 @@ const paymentRouter = require("./routes/paymentRoutes");
 
 // We must apply the cors middleware before any middleware runs
 app.use(cors({
-    origin: ["http://localhost:5173", "https://byte-rank.vercel.app"],
+    origin: ["http://localhost:5173", "https://ByteRank.vercel.app"],
     credentials: true
 }));
 app.use(express.json());
@@ -28,7 +28,9 @@ app.use(rateLimiter);
 app.use(async (req, res, next) => {
     try {
         // Only connect to Redis if it is NOT already connected
-
+        if (!redisClient.isOpen) {
+            await redisClient.connect();
+        }
         await main();
         console.log("DBs Connected");
 
