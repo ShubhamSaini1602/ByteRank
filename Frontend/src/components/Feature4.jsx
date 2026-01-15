@@ -1,4 +1,9 @@
 import { Link } from 'react-router';
+import adminPanelImage from "../assets/admin-PANEL.png";
+import notesImage from "../assets/notes-module.png";
+import orionImage from "../assets/ORION-AI.png";
+import paymentImage from "../assets/secure.png";
+import videoSolImage from "../assets/Video-SOL.png";
 
 function Feature4(){
     return (
@@ -21,7 +26,7 @@ function Feature4(){
                     <div className="bento-content">
                         <p className='orion-ka-text'>Orion - AI Visual Debugger</p>
                         <div className='orion-gradient'></div>
-                        <img src="../src/assets/ORION-AI.png" className='ORION-img'></img>
+                        <img src={orionImage} className='ORION-img'></img>
                     </div>
                 </div>
 
@@ -30,7 +35,7 @@ function Feature4(){
                     <div className="bento-content">
                         <p className='video-ka-text'>Video Solutions + Adaptive Bitrate Streaming</p>
                         <div className='video-sol-gradient'></div>
-                        <img src="../src/assets/Video-SOL.png" className='Video-img'></img>
+                        <img src={videoSolImage} className='Video-img'></img>
                     </div>
                 </div>
 
@@ -39,7 +44,7 @@ function Feature4(){
                     <div className="bento-content">
                         <p className='notes-ka-text'>Personalized Notes</p>
                         <div className='notes-gradient'></div>
-                        <img src="../src/assets/notes-module.png" className='Notes-img'></img>
+                        <img src={notesImage} className='Notes-img'></img>
                     </div>
                 </div>
 
@@ -48,7 +53,7 @@ function Feature4(){
                     <div className="bento-content">
                         <p className='admin-ka-text'>Admin Panel For Colleges</p>
                         <div className='admin-gradient'></div>
-                        <img src="../src/assets/admin-PANEL.png" className='admin-PANEL-img'></img>
+                        <img src={adminPanelImage} className='admin-PANEL-img'></img>
                     </div>
                 </div>
 
@@ -57,7 +62,7 @@ function Feature4(){
                     <div className="bento-content">
                         <p className='admin-ka-text'>Payments + Premium + Customer Support</p>
                         <div className='payment-gradient'></div>
-                        <img src="../src/assets/secure.png" className='payment-img'></img>
+                        <img src={paymentImage} className='payment-img'></img>
                     </div>
                 </div>
 

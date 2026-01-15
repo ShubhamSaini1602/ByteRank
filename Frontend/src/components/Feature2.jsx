@@ -1,5 +1,8 @@
 import { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
+import cImg from "../assets/C++.png";
+import pythonImg from "../assets/python.png";
+import jsImg from '../assets/js.png';
 
 function FlowingMenu({
         items = [],
@@ -164,9 +167,9 @@ function MenuItem({ link, text, image, speed, textColor, marqueeBgColor, marquee
 }
 
 const demoItems = [
-    { link: '#', text: 'C++', image: '../src/assets/C++.png' },
-    { link: '#', text: 'Python', image: '../src/assets/python.png' },
-    { link: '#', text: 'JavaScript', image: '../src/assets/js.png' },
+    { link: '#', text: 'C++', image: cImg },
+    { link: '#', text: 'Python', image: pythonImg },
+    { link: '#', text: 'JavaScript', image: jsImg },
 ];
 
 function Feature2(){

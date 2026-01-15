@@ -3,6 +3,22 @@ import {Autoplay} from "swiper/modules";
 
 import "swiper/css";
 
+// Import All Images
+import googleImg from "../assets/google.png";
+import amazonImg from "../assets/amazon.png";
+import oracleImg from "../assets/oracle.png";
+import salesforceImg from "../assets/salesforce.png";
+import facebookImg from "../assets/facebook.png";
+import netflixImg from "../assets/netflix.png";
+import ciscoImg from "../assets/cisco.png";
+import adobeImg from "../assets/adobe.png";
+import spotifyImg from "../assets/spotify.png";
+import dellImg from "../assets/dell.png";
+import intelImg from "../assets/intel.png";
+import nvidiaImg from "../assets/nvidia.png";
+import flipkartImg from "../assets/flipkart.png";
+import zomatoImg from "../assets/zomato.png";
+
 
 function Marquee(){
     return (
@@ -26,72 +42,72 @@ function Marquee(){
             >
             <SwiperSlide>
                 <div className="swiper-content">
-                    <img src="../src/assets/google.png" className="swiper-img"></img>
+                    <img src={googleImg} className="swiper-img"></img>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="swiper-content">
-                    <img src="../src/assets/amazon.png" className="swiper-img amazon"></img>
+                    <img src={amazonImg} className="swiper-img amazon"></img>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="swiper-content">
-                    <img src="../src/assets/oracle.png" className="swiper-img oracle"></img>
+                    <img src={oracleImg} className="swiper-img oracle"></img>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="swiper-content">
-                    <img src="../src/assets/salesforce.png" className="swiper-img"></img>
+                    <img src={salesforceImg} className="swiper-img"></img>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="swiper-content">
-                    <img src="../src/assets/facebook.png" className="swiper-img facebook"></img>
+                    <img src={facebookImg} className="swiper-img facebook"></img>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="swiper-content">
-                    <img src="../src/assets/netflix.png" className="swiper-img"></img>
+                    <img src={netflixImg} className="swiper-img"></img>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="swiper-content">
-                    <img src="../src/assets/cisco.png" className="swiper-img cisco"></img>
+                    <img src={ciscoImg} className="swiper-img cisco"></img>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="swiper-content">
-                    <img src="../src/assets/adobe.png" className="swiper-img adobe"></img>
+                    <img src={adobeImg} className="swiper-img adobe"></img>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="swiper-content">
-                    <img src="../src/assets/spotify.png" className="swiper-img spotify"></img>
+                    <img src={spotifyImg} className="swiper-img spotify"></img>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="swiper-content">
-                    <img src="../src/assets/dell.png" className="swiper-img dell"></img>
+                    <img src={dellImg} className="swiper-img dell"></img>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="swiper-content">
-                    <img src="../src/assets/intel.png" className="swiper-img intel"></img>
+                    <img src={intelImg} className="swiper-img intel"></img>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="swiper-content">
-                    <img src="../src/assets/nvidia.png" className="swiper-img nvidia"></img>
+                    <img src={nvidiaImg} className="swiper-img nvidia"></img>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="swiper-content">
-                    <img src="../src/assets/flipkart.png" className="swiper-img flipkart"></img>
+                    <img src={flipkartImg} className="swiper-img flipkart"></img>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="swiper-content">
-                    <img src="../src/assets/zomato.png" className="swiper-img zomato"></img>
+                    <img src={zomatoImg} className="swiper-img zomato"></img>
                 </div>
             </SwiperSlide>
             </Swiper>

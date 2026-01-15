@@ -4,6 +4,8 @@ import TypingAnimation from "./TypingAnimation";
 import { Link } from "react-router";
 import ProfileMenu from "./ProfileMenu";
 import { useSelector } from "react-redux";
+import codingTagImg from "../assets/coding-tag.png";
+import LogoImg from "../assets/Logo.png";
 
 function Header(){
     const { user } = useSelector((state) => state.auth);
@@ -18,7 +20,7 @@ function Header(){
         />
         <div className="header">
             <div className="navbar">
-                <img src="../src/assets/Logo.png" className="logo"></img>
+                <img src={LogoImg} className="logo"></img>
                 <div className="navbar-2">
                     <div className="div1 extra-div-1">
                         <i className="ri-home-7-fill home-icon"></i>
@@ -85,7 +87,7 @@ function Header(){
                             <button className="start">Start Your Journey</button>
                         </Link>
                         <div className="logo-btn">
-                            <img src="../src/assets/coding-tag.png" className="coding-tag"></img>
+                            <img src={codingTagImg} className="coding-tag"></img>
                             <button className="try-problem">Try a Sample Problem</button>
                         </div>
                     </div>

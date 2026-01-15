@@ -9,6 +9,9 @@ import "swiper/css";
 // Import additional components' css as well if any
 // ----------Nothing for now-----------------------
 
+// Import Images
+import rightArrowImg from "../assets/right-arrow.png";
+
 function InfiniteSlider(){
     
     return (
@@ -30,61 +33,61 @@ function InfiniteSlider(){
             <SwiperSlide>
                 <div className="content">
                     <h1 className="swiper-text1">HAPPY CODING</h1>
-                    <img src="../src/assets/right-arrow.png" className="swiper-img"></img>
+                    <img src={rightArrowImg} className="swiper-img"></img>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="content">
                     <h1 className="swiper-text2">Happy Coding</h1>
-                    <img src="../src/assets/right-arrow.png" className="swiper-img"></img>
+                    <img src={rightArrowImg} className="swiper-img"></img>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="content">
                     <h1 className="swiper-text1">HAPPY CODING</h1>
-                    <img src="../src/assets/right-arrow.png" className="swiper-img"></img>
+                    <img src={rightArrowImg} className="swiper-img"></img>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="content">
                     <h1 className="swiper-text2">Happy Coding</h1>
-                    <img src="../src/assets/right-arrow.png" className="swiper-img"></img>
+                    <img src={rightArrowImg} className="swiper-img"></img>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="content">
                     <h1 className="swiper-text1">HAPPY CODING</h1>
-                    <img src="../src/assets/right-arrow.png" className="swiper-img"></img>
+                    <img src={rightArrowImg} className="swiper-img"></img>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="content">
                     <h1 className="swiper-text2">Happy Coding</h1>
-                    <img src="../src/assets/right-arrow.png" className="swiper-img"></img>
+                    <img src={rightArrowImg} className="swiper-img"></img>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="content">
                     <h1 className="swiper-text1">HAPPY CODING</h1>
-                    <img src="../src/assets/right-arrow.png" className="swiper-img"></img>
+                    <img src={rightArrowImg} className="swiper-img"></img>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="content">
                     <h1 className="swiper-text2">Happy Coding</h1>
-                    <img src="../src/assets/right-arrow.png" className="swiper-img"></img>
+                    <img src={rightArrowImg} className="swiper-img"></img>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="content">
                     <h1 className="swiper-text1">HAPPY CODING</h1>
-                    <img src="../src/assets/right-arrow.png" className="swiper-img"></img>
+                    <img src={rightArrowImg} className="swiper-img"></img>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="content">
                     <h1 className="swiper-text2">Happy Coding</h1>
-                    <img src="../src/assets/right-arrow.png" className="swiper-img"></img>
+                    <img src={rightArrowImg} className="swiper-img"></img>
                 </div>
             </SwiperSlide>
             </Swiper>

@@ -4,6 +4,8 @@ import DashboardOptimizer from "./DashboardOptimizer";
 import axiosClient from "../utils/axiosClient";
 import { useEffect, useState } from "react";
 import Carousel from "./Carousel";
+import adminOptimize from "../assets/admin.png"
+import trendImg from "../assets/trend.png";
 
 function Dashboard(){
     const userInfo = useSelector((state) => state.auth.user);
@@ -41,7 +43,7 @@ function Dashboard(){
             <WelcomeBanner/>
             <p className="dashboard-TEXT">Your coding platform is thriving. Create, edit and manage problems to help developers sharpen their skills.</p>
             <div className="image-div">
-                <img src="../src/assets/admin.png" className="admin-pic2"></img>
+                <img src={adminOptimize} className="admin-pic2"></img>
                 <div className="extra-positioning-div">
                     <DashboardOptimizer/>
                 </div>
@@ -63,7 +65,7 @@ function Dashboard(){
         </div>
         <div className="dashboard-carousel">
             <div className="platform-insights-div">
-                <img src="../src/assets/trend.png" className="trend-img"></img>
+                <img src={trendImg} className="trend-img"></img>
                 <h2 className="insights">Platform Insights</h2>
             </div>
             <div style={{position: 'relative' }}>

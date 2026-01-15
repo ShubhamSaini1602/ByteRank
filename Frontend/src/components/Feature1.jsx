@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
 import { Link } from 'react-router';
+import codeEditorVideo from "../assets/Comp 1.mp4";
 
 const LightPillar = ({
   topColor = '#5227FF',
@@ -358,7 +359,7 @@ function Feature1(){
             </div>
             <div className="feature1-video-div">
                 <video height="400px" className="feature1-video" autoPlay muted loop>
-                    <source src="../src/assets/Comp 1.mp4" type="video/mp4"></source>
+                    <source src={codeEditorVideo} type="video/mp4"></source>
                 </video>
                 <div className='light-pillar'>
                     <LightPillar

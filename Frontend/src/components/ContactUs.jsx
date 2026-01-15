@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router';
 import toast from 'react-hot-toast'; 
 import { contactUs } from '../CentralStore/authSlice';
 import FloatingLines from './FloatingLines';
+import customerSupportVideo from "../assets/customer-support-video.mp4";
 
 function ContactUs() {
     const dispatch = useDispatch();
@@ -55,7 +56,7 @@ function ContactUs() {
                 {/* Left Side: Contact Info */}
                 <div className="contact-info">
                     <video height="600" autoPlay muted loop className='customer-support-video'>
-                        <source src="../src/assets/customer-support-video.mp4" type="video/mp4"></source>
+                        <source src={customerSupportVideo} type="video/mp4"></source>
                         Your Browser does not support the video element
                     </video>
                 </div>

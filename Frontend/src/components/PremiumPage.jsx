@@ -8,6 +8,8 @@ import axiosClient from '../utils/axiosClient';
 import toast from 'react-hot-toast';
 import { updateUser } from '../CentralStore/authSlice';
 import Footer from "./Footer";
+import logoImg from "../assets/Logo.png";
+import subscriptionVideo from "../assets/subscription.mp4";
 
 const tiers = [
     {
@@ -216,7 +218,7 @@ function PricingPage(){
         />
 
         <div className="navbar">
-            <img src="../src/assets/Logo.png" className="logo"></img>
+            <img src={logoImg} className="logo"></img>
             <div className="navbar-2">
                 <div className="div1 extra-div-1">
                     <i className="ri-home-7-fill home-icon"></i>
@@ -262,7 +264,7 @@ function PricingPage(){
             <div className='pricing-title-and-video-div'>
                 <h1 className="pricing-title">Invest in your<span className="pricing-title-gradient"> Coding Career</span></h1>
                 <video height="100" autoPlay muted loop className='subs-video'>
-                    <source src="../src/assets/subscription.mp4" type="video/mp4"></source>
+                    <source src={subscriptionVideo} type="video/mp4"></source>
                     Your Browser does not support the video element
                 </video>
             </div>

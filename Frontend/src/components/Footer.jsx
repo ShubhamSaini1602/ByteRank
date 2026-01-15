@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+import logoImg from "../assets/logo.png";
 
 function Footer(){
 
@@ -9,7 +10,7 @@ function Footer(){
         
         		{/* Column 1: Brand & Socials */}
         		<div className="footer-brand-col">
-            		<img src="../src/assets/logo.png" alt="ByteRank Logo" className="footer-logo-img" />
+            		<img src={logoImg} alt="ByteRank Logo" className="footer-logo-img" />
           			<p className="footer-tagline">Empowering the next generation of developers with AI-driven learning and adaptive video solutions.</p>
           			<div className="footer-socials">
             			<a href="https://x.com/Shubham_6175" className="social-link remove-line"><i className="ri-twitter-x-line"></i></a>

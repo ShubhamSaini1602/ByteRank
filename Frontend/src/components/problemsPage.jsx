@@ -6,6 +6,10 @@ import { useState } from "react";
 import axiosClient from "../utils/axiosClient";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
+import arrowImg from "../assets/arrow.png";
+import codeSymbolImg from "../assets/code-symbol.png";
+import logoImg from "../assets/Logo.png";
+import problemSolvingImg from "../assets/problem-solving.png";
 
 function ProblemsPage(){
     const [allProblems, setAllProblems] = useState([]);
@@ -46,7 +50,7 @@ function ProblemsPage(){
         />
 
         <div className="navbar">
-            <img src="../src/assets/Logo.png" className="logo"></img>
+            <img src={logoImg} className="logo"></img>
             <div className="navbar-2">
                 <div className="div1 extra-div-1">
                     <i className="ri-home-7-fill home-icon"></i>
@@ -97,17 +101,17 @@ function ProblemsPage(){
                     </div>
                 </div>
                 <p className="sharpen">Sharpen your coding skills, track progress, and unlock achievements as you solve challenges crafted to push your limits.</p>
-                <p className="last-text">Every problem you solve levels you up. <img src="../src/assets/arrow.png" className="arrow"></img></p>
+                <p className="last-text">Every problem you solve levels you up. <img src={arrowImg} className="arrow"></img></p>
             </div>
-            <img src="../src/assets/problem-solving.png" className="problem-solving-img"></img>
+            <img src={problemSolvingImg} className="problem-solving-img"></img>
         </div>
 
         <hr className="problem-hr-tag"></hr>
 
         <div className="explore-problems">
-            <img src="../src/assets/code-symbol.png" className="left-symbol"></img>
+            <img src={codeSymbolImg} className="left-symbol"></img>
             <p className="allProblems">Explore Coding Problems</p>
-            <img src="../src/assets/code-symbol.png" className="right-symbol"></img>
+            <img src={codeSymbolImg} className="right-symbol"></img>
         </div>
 
         {/* Our Problems List */}
