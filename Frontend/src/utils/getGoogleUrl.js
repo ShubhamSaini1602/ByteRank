@@ -1,9 +1,13 @@
 function getGoogleUrl(){
     const rootUrl = 'https://accounts.google.com/o/oauth2/v2/auth';
 
+    const REDIRECT_URI = import.meta.env.DEV
+        ? 'http://localhost:5173/auth/google-callback'
+        : 'https://byte-rank.netlify.app/auth/google-callback';
+
     const options = {
         // Must match what is in userAuth.js and Google Console
-        redirect_uri: 'http://localhost:5173/auth/google-callback', 
+        redirect_uri: REDIRECT_URI, 
         client_id: import.meta.env.VITE_GOOGLE_CLIENT_ID, 
         access_type: 'offline',
         response_type: 'code',

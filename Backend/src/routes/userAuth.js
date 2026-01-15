@@ -14,9 +14,13 @@ const sendEmail = require("../utils/sendEmail");
 const axios = require("axios");
 const sendContactSupportEmail = require("../utils/sendContactSupportEmail");
 
+const isProduction = process.env.NODE_ENV === "production";
+
 // GOOGLE AUTH CONFIGURATION
 const { OAuth2Client } = require('google-auth-library');
-const REDIRECT_URI = 'http://localhost:5173/auth/google-callback';
+const REDIRECT_URI = isProduction
+    ? 'https://byte-rank.netlify.app/auth/google-callback'
+    : 'http://localhost:5173/auth/google-callback';
 
 const googleClient = new OAuth2Client(
     process.env.GOOGLE_CLIENT_ID,
@@ -97,7 +101,11 @@ authRouter.post("/register", async(req,res) => {
             role: "user"
         }
         const token = jwt.sign(payload, process.env.SECRET_KEY, {expiresIn: '1h'});
-        res.cookie("token", token);
+        res.cookie("token", token, {
+            httpOnly: true,
+            secure: isProduction,
+            sameSite: isProduction ? "none" : "lax"
+        });
 
         const reply = {
             firstName: user.firstName,
@@ -145,7 +153,11 @@ authRouter.post("/login", async(req,res) => {
             role: user.role
         }
         const token = jwt.sign(payload, process.env.SECRET_KEY, {expiresIn: '1h'});
-        res.cookie("token", token);
+        res.cookie("token", token, {
+            httpOnly: true,
+            secure: isProduction,
+            sameSite: isProduction ? "none" : "lax"
+        });
 
         const reply = {
             firstName: user.firstName,
@@ -210,7 +222,11 @@ authRouter.post("/google-login", async(req,res) => {
         };
 
         const token = jwt.sign(payload, process.env.SECRET_KEY, { expiresIn: '1h' });
-        res.cookie("token", token);
+        res.cookie("token", token, {
+            httpOnly: true,
+            secure: isProduction,
+            sameSite: isProduction ? "none" : "lax"
+        });
 
         const reply = {
             firstName: user.firstName,
@@ -249,8 +265,9 @@ authRouter.post("/github-login", async(req,res) => {
         // (and related OAuth data) in JSON format.
         const tokenResponse = await axios.post("https://github.com/login/oauth/access_token",
             {
-                client_id: process.env.GITHUB_CLIENT_ID,
-                client_secret: process.env.GITHUB_CLIENT_SECRET,
+
+                client_id: isProduction ? process.env.GITHUB_CLIENT_ID_PROD : process.env.GITHUB_CLIENT_ID,
+                client_secret: isProduction ? process.env.GITHUB_CLIENT_SECRET_PROD : process.env.GITHUB_CLIENT_SECRET,
                 code: code,
             },
             {
@@ -339,7 +356,11 @@ authRouter.post("/github-login", async(req,res) => {
         };
 
         const token = jwt.sign(payload, process.env.SECRET_KEY, { expiresIn: "1h" });
-        res.cookie("token", token);
+        res.cookie("token", token, {
+            httpOnly: true,
+            secure: isProduction,
+            sameSite: isProduction ? "none" : "lax"
+        });
 
         const reply = {
             firstName: user.firstName,
@@ -396,7 +417,12 @@ authRouter.post("/logout",validateToken, async(req,res) => {
         await redisClient.set(`token:${token}`, "Blocked");
         await redisClient.expireAt(`token:${token}`, payload.exp);
 
-        res.cookie("token", null, {expires: new Date(Date.now())});
+        res.cookie("token", null, {
+            expires: new Date(Date.now()),
+            httpOnly: true,
+            secure: isProduction,
+            sameSite: isProduction ? "none" : "lax"
+        });
         res.send("Logged Out Successfully");
     }
     catch(err){
