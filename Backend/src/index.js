@@ -21,9 +21,6 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use(cookieParser());
-// Before Processing any incoming user request (GET, POST, PUT, etc..)
-// we'll execute our rateLimiter Logic first
-app.use(rateLimiter);
 
 app.use(async (req, res, next) => {
     try {
@@ -40,6 +37,10 @@ app.use(async (req, res, next) => {
         res.status(500).json({ error: "Database Connection Failed" });
     }
 });
+
+// Before Processing any incoming user request (GET, POST, PUT, etc..)
+// we'll execute our rateLimiter Logic first
+app.use(rateLimiter);
 
 // ------ ROUTES ------
 // Jab humara path /user hoga, toh authRouter par chale jaana
