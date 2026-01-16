@@ -6,7 +6,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 async function sendContactSupportEmail(userDetails, subject, message) {
     try {
         const { data, error } = await resend.emails.send({
-            from: "ByteRank Contact <onboarding@resend.dev>",
+            from: "ByteRank Contact <noreply@byte-rank.com>",
             to: [process.env.ADMIN_EMAIL], // Add ADMIN_EMAIL to your .env
             reply_to: userDetails.email,   // This lets you reply directly to the user
             subject: `New Support Request: ${subject}`,

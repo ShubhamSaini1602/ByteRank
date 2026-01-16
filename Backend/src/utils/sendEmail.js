@@ -13,7 +13,7 @@ async function sendEmail(email, otp) {
             // (in our case: sshubham.ssaini229@gmail.com). We cannot send verification emails to every new user who visits our site — this is just how the free tier works.
             // After deployment, once we have our own domain, we can verify that domain on Resend. Once the domain is verified, we can place it in the "from" field, and then we’ll be
             // able to send emails to any user who visits our website.
-            from: "ByteRank <onboarding@resend.dev>", 
+            from: "ByteRank <noreply@byte-rank.com>", 
             to: [email], // The email address entered by the user who is visiting our website.
             subject: "Your ByteRank Verification Code",
             html: `
